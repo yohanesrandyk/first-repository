@@ -97,19 +97,19 @@ var educations = [];
 
 function education() {
 	sub();
-      let d = Session.get('id');
-      let b = collJobs.find({_id : d}).fetch();
-      let refedutype = collEduType.find().fetch();
-      let reffaculty = collFaculty.find().fetch();
-      let refedumajor = collEduMajor.find().fetch();
-      educations = [];
+      	let d = Session.get('id');
+      	let b = collJobs.find({_id : d}).fetch();
+      	let refedutype = collEduType.find().fetch();
+      	let reffaculty = collFaculty.find().fetch();
+      	let refedumajor = collEduMajor.find().fetch();
+      	educations = [];
 
-      for(x in b){
+      	for(x in b){
         let education = b[x].education;
         for(y in education){
-        	let educationtype = [];
-      		let educationfaculty = [];
-      		let educationmajor = [];
+            let educationtype = [];
+      	    let educationfaculty = [];
+      	    let educationmajor = [];
             let typeed = education[y].typeid;
             let faculty = education[y].faculty;
             let nm = education[y].name;
